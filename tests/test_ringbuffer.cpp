@@ -6,7 +6,6 @@
 int main() {
     LockFreeRingBuffer<int, 10> rb;
     
-    // Single producer thread
     std::thread producer([&rb]() {
         for (int i = 0; i < 100; ++i) {
             while (!rb.push(i)) {
@@ -14,7 +13,7 @@ int main() {
             }
         }
     });
-
+    // INESRT TEST SHERE LATER
     // Single consumer thread
     std::thread consumer([&rb]() {
         for (int i = 0; i < 100; ++i) {
