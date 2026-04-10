@@ -14,7 +14,7 @@ int main() {
         for (int i = 0; i < NUM_ITERATIONS; ++i) {
             lock.lock();
             counter++;
-            lock.unlock();
+            lock.unlock(); //check spinlock test;
         }
     };
 
