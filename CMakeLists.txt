@@ -8,3 +8,5 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -march=native -DNDEBUG")
 
 include_directories(include)
+
+add_executable(test_mpmcqueue tests/test_mpmcqueue.cpp)
